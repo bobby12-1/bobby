@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Rooms</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Our Rooms</h1>
+     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="booking.html">Book Now</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="room-list">
+    <div class="room">
+      <img src="image folder/deluxe.jfif" alt="Deluxe Room" />
+      <h3>Deluxe Room</h3>
+      <p>25000 naira/night – 12 units</p>
+    </div>
+    <div class="room">
+      <img src="image folder/executive suite.jfif" alt="Executive Room" />
+      <h3>Executive Room</h3>
+      <p>27500 naira/night – 9 units</p>
+    </div>
+    <div class="room">
+      <img src="image folder/royal executive suite.jfif" alt="Royal Executive Room" />
+      <h3>Royal Executive Room</h3>
+      <p>30000 naira/night – 4 units</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Dotmot Hotel and Suites. All rights reserved.</p>
+  </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!expanded));
+    });
+  });
+</script>
+
+</body>
+</html>
+<script>
+  const toggleBtn = document.getElementById('menuToggle');
+  const nav = document.getElementById('navbar');
+
+  toggleBtn.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>

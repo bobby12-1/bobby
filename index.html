@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dotmot Hotel and Suites</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+  <div class="container">
+    <img src="image folder/logo.jpeg" alt="Logo" class="logo" />
+
+    <!-- Toggle button for mobile -->
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="rooms.html">Rooms</a>
+<a href="booking.html">Book Now</a>
+<a href="contact.html">Contact</a>
+
+    </nav>
+  </div>
+</header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Dotmot Hotel & Suites</h1>
+      <p>Your comfort, our priority.</p>
+      <a href="booking.html" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="image folder/front view.jfif" alt="Front View of Hotel">
+        <img src="image folder/welcome reception.jfif" alt="Interior View of Hotel">
+        <img src="image folder/standby generator.jfif" alt="standby generator">
+        <img src="image folder/Executive VIP lounge.jfif" alt="vip lounge">
+        <img src="image folder/walkway.jfif" alt="walkway">
+        <img src="image folder/night view.jfif" alt="night view">
+        <img src="image folder/full view.jfif" alt="full view">
+        
+      </div>
+</section>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Our Location</h3>
+        <p>
+          Along Ifaki Omuo Road,<br>
+          Ikole-Ekiti,<br>
+          Ekiti State
+        </p>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:dotmotsuites@gmail.com">dotmotsuites@gmail.com</a></p>
+        <p>Phone: <a href="tel:+2348131367488">+2348131367488</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Dotmot Hotel and Suites. All rights reserved.</p>
+  </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+
+      // Update accessibility attribute
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+    });
+  });
+</script>
+
+</body>
+</html>
+
+<script>
+  const toggleBtn = document.getElementById('menuToggle');
+  const nav = document.getElementById('navbar');
+
+  toggleBtn.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>

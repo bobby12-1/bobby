@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Your Stay | Dotmot Hotel & Suites</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="booking-page">
+
+  <header class="booking-header">
+  <div class="container">
+    <img src="image folder/logo.jpeg" alt="Logo" class="logo" />
+
+    <!-- Toggle button for mobile -->
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+    <!-- Navigation -->
+    <div class="container">
+      <h1>Book Your Stay</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="booking.html" class="active">Book Now</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="booking-main">
+    <div class="form-card">
+      <h2>Reservation Form</h2>
+      <form class="booking-form" onsubmit="submitBooking(event)">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="room">Room Type</label>
+            <select id="room" name="room" required>
+              <option value="">Select a Room</option>
+              <option>Deluxe Room</option>
+              <option>Executive Room</option>
+              <option>Royal Executive Room</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests">
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4+ Guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">Check-in Date</label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+
+          <div class="form-group">
+            <label for="checkout">Check-out Date</label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-book">Confirm Booking</button>
+      <div class="form-group">
+  <label for="payment-method">Payment Method</label>
+  <select id="payment-method" name="paymentMethod" required>
+    <option value="paystack">Card / Paystack</option>
+    <option value="bank_transfer">Bank Transfer</option>
+  </select>
+</div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Dotmot Hotel and Suites. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+
+      // Update accessibility attribute
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+    });
+  });
+</script>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+</body>
+</html>
+
+<script>
+  const toggleBtn = document.getElementById('menuToggle');
+  const nav = document.getElementById('navbar');
+
+  toggleBtn.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
